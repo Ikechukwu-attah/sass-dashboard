@@ -45,6 +45,54 @@ const usersData: User[] = [
     role: "User",
     status: "Active",
   },
+
+  {
+    id: 5,
+    name: "Sarah White",
+    email: "sarah@example.com",
+    role: "User",
+    status: "Active",
+  },
+
+  {
+    id: 6,
+    name: "Sarah White",
+    email: "sarah@example.com",
+    role: "User",
+    status: "Active",
+  },
+
+  {
+    id: 7,
+    name: "Sarah White",
+    email: "sarah@example.com",
+    role: "User",
+    status: "Active",
+  },
+
+  {
+    id: 8,
+    name: "Sarah White",
+    email: "sarah@example.com",
+    role: "User",
+    status: "Active",
+  },
+
+  {
+    id: 9,
+    name: "Sarah White",
+    email: "sarah@example.com",
+    role: "User",
+    status: "Active",
+  },
+
+  {
+    id: 10,
+    name: "Sarah White",
+    email: "sarah@example.com",
+    role: "User",
+    status: "Active",
+  },
 ];
 
 const loggedInUserRole: User["role"] = "Admin"; // Change to "User" to test restrictions

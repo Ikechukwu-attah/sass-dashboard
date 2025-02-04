@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import Sidebar from "@/components/Sidebar";
 import Navbar from "@/components/Navbar";
 import ThemeProviderWrapper from "@/components/ThemeProviderWrapper";
+import LayoutWrapper from "@/components/LayoutWrapper";
+import AuthProvider from "@/components/AuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,16 +21,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} flex h-screen`}>
-        <ThemeProviderWrapper>
-          {/* Sidebar - Fixed & Non-Scrolling */}
-          <Sidebar />
-          {/* Main Content - Scrollable */}
-          <div className="flex flex-col flex-1 overflow-y-auto">
-            <Navbar />
-            <main className="p-6">{children}</main>
-          </div>
-        </ThemeProviderWrapper>
+      <body>
+        <AuthProvider>
+          {" "}
+          <LayoutWrapper>{children}</LayoutWrapper>
+        </AuthProvider>
       </body>
     </html>
   );
