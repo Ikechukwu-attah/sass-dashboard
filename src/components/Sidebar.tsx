@@ -23,21 +23,24 @@ const Sidebar = () => {
         <FiMenu className="text-xl" />
       </button>
 
-      {/* Sidebar */}
+      {/* Sidebar (Fixed and Non-Scrolling) */}
       <aside
-        className={`sidebar h-screen p-4 fixed top-0 left-0 z-40 transition-transform ${
+        className={`h-screen fixed top-0 left-0 z-40 bg-gray-900 text-white transition-transform ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         } lg:relative lg:translate-x-0 lg:w-60 ${
           collapsed ? "lg:w-16" : "lg:w-60"
-        } border-r border-gray-300 dark:border-gray-700`}
+        } border-r border-gray-300 dark:border-gray-700 overflow-hidden`}
       >
+        {/* Toggle Sidebar (Desktop) */}
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="hidden lg:flex mb-4 items-center"
+          className="hidden lg:flex mb-4 items-center p-4"
         >
           <FiMenu className="text-xl" />
         </button>
-        <nav className="flex flex-col space-y-4 mt-6">
+
+        {/* Navigation */}
+        <nav className="flex flex-col space-y-4 mt-6 p-4">
           <Link
             href="/"
             className="flex items-center space-x-2 hover:text-gray-400"

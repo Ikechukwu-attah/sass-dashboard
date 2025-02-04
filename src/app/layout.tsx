@@ -19,10 +19,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} flex`}>
+      <body className={`${inter.className} flex h-screen`}>
         <ThemeProviderWrapper>
+          {/* Sidebar - Fixed & Non-Scrolling */}
           <Sidebar />
-          <div className="flex flex-col flex-1">
+          {/* Main Content - Scrollable */}
+          <div className="flex flex-col flex-1 overflow-y-auto">
             <Navbar />
             <main className="p-6">{children}</main>
           </div>
